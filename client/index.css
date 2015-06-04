@@ -1,0 +1,233 @@
+.piece,
+.TetrisPiece {
+    display: absolute;
+    max-width: 8em;
+    min-width: 8em;
+    max-height 8em;
+    min-height 8em;
+    font-size: 1em;
+}
+@-webkit-keyframes greenPulse {
+    from {
+        opacity: 0;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+    to {
+        opacity: 1;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+}
+.cell,
+.TetrisCell {
+    transition-property: background-color;
+    transition-duration: 0s;
+    padding: 0.9em;
+    position: absolute;
+    display: inline-block;
+    border: 0.1em solid white;
+    font-size: 1em;
+}
+.TetrisCell:hover {
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+}
+.cells {
+    background-color: lightgrey;
+    position: absolute;
+    width: 20em;
+    height: 44em;
+    max-width: 20em;
+    font-size: 1em;
+    top: 0em;
+    left: 20em;
+}
+.GameBox {
+    position: absolute;
+    font-size: 12px;
+    width: 60em;
+    height: 44em;
+    margin: 10% 20%;
+}
+.heldBox {
+    position: absolute;
+    top: 4em;
+    left: 1em;
+}
+.ScoreBox {
+    position: absolute;
+    left: 5em;
+    top: 15em;
+}
+.row {
+    font-size: 1em;
+    border: 0em;
+}
+body {
+    width: 40em;
+    margin: 0 auto;
+}
+.paused,
+.on {
+    background: red;
+}
+.notPaused,
+.off {
+    background: green;
+}
+.enabled {
+    background-color: white;
+}
+.disabled {
+    display: none;
+}
+button,
+.button {
+    height: 4em;
+    width: 8em;
+}
+.Settings {
+    position: absolute;
+    height: 5em;
+    right: 1em;
+    top: 7em;
+    width: 4em;
+}
+@media (max-width: 641px) {
+    .Controls {
+        display: none;
+    }
+    .previewBox {
+        display: none;
+    }
+    .Issues {
+        display: none;
+    }
+}
+@media (min-width: 641px) {
+    .Controls {
+        border: 2em;
+        position: absolute;
+        display: inline;
+        width: 20em;
+        text-align: center;
+        top: 25em;
+        left: 0em;
+    }
+    .pauseLabel {
+        position: absolute;
+        text-align: center;
+        width: 2.5em;
+        height: 1.4em;
+        left: 2em;
+        top: 10em;
+        font-size: 1em;
+    }
+    .keyMappings {
+        top: 1em;
+        left: 1em;
+        position: absolute;
+        font-size: 0.5em;
+    }
+    .previewBox {
+        position: absolute;
+        height: 6em;
+        width: 6em;
+        top: 4em;
+        left: 41em;
+    }
+    .Issues {
+        position: absolute;
+        width: 20.4em;
+        text-align: center;
+        bottom: 2em;
+        left: 0em;
+        font-size: 0.5em;
+    }
+}
+.rightCenter {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    margin-top: -50%;
+}
+.gameOver {
+    vertical-align: middle;
+    text-align: center;
+    z-index: 9999999;
+    font-size: 2em;
+    background: rgba(26, 255, 0, 0.80);
+    height: 100%;
+    width: 34%;
+    left: 33%;
+    position: absolute;
+}
+.pauseScreen {
+    vertical-align: middle;
+    text-align: center;
+    z-index: 99999;
+    font-size: 2em;
+    background: rgb(26, 255, 0);
+    height: 100%;
+    width: 34%;
+    left: 33%;
+    position: absolute;
+}
+.ghost {
+    opacity: 0.35;
+    border-color: brown;
+    background-image: url("http://forums.na.leagueoflegends.com/board/attachment.php?attachmentid=894210&d=1392252905");
+    background-size: auto;
+    background-size: contain;
+}
+.moving {
+    border-color: teal;
+    background-image: url("http://i.imgur.com/zYPmRYz.png");
+    background-size: auto;
+    background-size: contain;
+}
+.placed {
+    border-color: black;
+    background-image: url("http://i.imgur.com/2ouaOiB.png");
+    background-size: auto;
+    background-size: contain;
+}
+.default {
+    border-color: orange;
+}
+.offMap {
+    border-color: red;
+}
+.unused {
+    border-color: white;
+    opacity: 1;
+}
+.preview {
+    border-color: pink;
+    background-image: url("http://fc00.deviantart.net/fs70/f/2013/323/c/c/twisted_poro_by_andie200-d6utjw2.png");
+    background-size: auto;
+    background-size: contain;
+}
+.leftAlign {
+    text-align: left;
+}
+.inline {
+    display: inline;
+}
+div:hover {
+    border: 0em solid red;
+}
+.hidden {
+    display: none;
+    z-index: -999999;
+}
+#main_Container2 {
+    height: 75%;
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    bottom: 12.5%;
+}
